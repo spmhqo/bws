@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Product Marketing Expert & Consultant</title>
+  <link rel="icon" type="image/x-icon" href="spm.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-dark: #26483c;
+      --accent-pink: #fa72dc;
+      --accent-blue: #3582be;
+      --accent-lime: #d2da7e;
+      --primary-sage: #5d8d7f;
+      --bg-page: #f4f7f6;
+      --bg-card: #ffffff;
+      --text-main: #1f2933;
+      --text-muted: #52606d;
+      --border-color: #d9e2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.75;
+      font-size: 16px;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(38, 72, 60, 0.08);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .top-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-sage) 100%);
+      color: #ffffff;
+      padding: 28px 24px;
+      border-bottom: 4px solid var(--accent-lime);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent-lime);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .intro-lead {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #f0f4f8;
+    }
+
+    .hero-title-highlight {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border-left: 5px solid var(--accent-pink);
+      margin: 12px 0 16px 0;
+      line-height: 1.35;
+    }
+
+    .intro-desc {
+      font-size: 1.05rem;
+      color: #f8fafc;
+    }
+
+    .content-wrapper {
+      padding: 24px;
+    }
+
+    .responsive-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      background: #ffffff;
+    }
+
+    .responsive-table thead {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+    }
+
+    .responsive-table th {
+      text-align: left;
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      border-bottom: 3px solid var(--accent-blue);
+    }
+
+    .responsive-table td {
+      padding: 20px 18px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    .responsive-table tbody tr:nth-child(even) {
+      background-color: #fafcfb;
+    }
+
+    .responsive-table tbody tr:hover {
+      background-color: #f2f7f5;
+    }
+
+    .section-col {
+      width: 32%;
+      background-color: rgba(93, 141, 127, 0.06);
+      border-right: 1px solid var(--border-color);
+    }
+
+    .detail-col {
+      width: 68%;
+    }
+
+    h2 {
+      font-size: 1.22rem;
+      color: var(--primary-dark);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.45rem;
+      color: var(--accent-blue);
+      line-height: 1.35;
+      margin: 8px 0;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .statement-box {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--accent-blue);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.65;
+    }
+
+    .philosophy-quote {
+      background-color: rgba(210, 218, 126, 0.25);
+      border-left: 4px solid var(--primary-dark);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 10px 0 14px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.02rem;
+      color: var(--primary-dark);
+    }
+
+    .advice-box {
+      margin-top: 24px;
+      background: linear-gradient(to right, rgba(38, 72, 60, 0.05), rgba(53, 130, 190, 0.06));
+      border: 1px solid var(--primary-sage);
+      border-left: 5px solid var(--accent-pink);
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 1.03rem;
+      color: var(--text-main);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 16px;
+      background-color: var(--primary-dark);
+      color: #e2e8f0;
+      font-size: 0.88rem;
+    }
+
+    /* 100% Mobile Responsive Table Layout */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .top-banner {
+        padding: 20px 16px;
+      }
+
+      .hero-title-highlight {
+        font-size: 1.28rem;
+        padding: 10px 12px;
+      }
+
+      .content-wrapper {
+        padding: 14px;
+      }
+
+      .responsive-table,
+      .responsive-table thead,
+      .responsive-table tbody,
+      .responsive-table th,
+      .responsive-table td,
+      .responsive-table tr {
+        display: block;
+        width: 100%;
+      }
+
+      .responsive-table thead {
+        display: none;
+      }
+
+      .responsive-table tbody tr {
+        margin-bottom: 18px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+        background: #ffffff !important;
+      }
+
+      .responsive-table tbody tr:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-col {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        background-color: rgba(38, 72, 60, 0.06);
+        padding: 14px 16px;
+      }
+
+      .detail-col {
+        width: 100%;
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      h2 {
+        font-size: 1.12rem;
+      }
+
+      .advice-box {
+        padding: 16px;
+        margin-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top-banner">
+      <span class="badge">Professional Identity Blueprint</span>
+      <p class="intro-lead">তাহলে আপনার Professional Identity-র মূল ভিত্তি হবে:</p>
+      <div class="hero-title-highlight">
+        <strong>Online Product Marketing Expert &amp; Consultant</strong>
+      </div>
+      <p class="intro-desc">
+        আপনার কাজ শুধু Client-কে পরামর্শ দেওয়া নয়। বরং সম্পূর্ণ নতুন একজন শিক্ষার্থীকে ধাপে ধাপে এমনভাবে শেখানো, যাতে তিনি নিজের Physical Product Business-এর Online Marketing, Promotion, Traffic Generation এবং Sales Generation-এর সম্পূর্ণ প্রক্রিয়াটি বুঝতে, বাস্তবায়ন করতে এবং স্বাধীনভাবে পরিচালনা করতে পারেন।
+      </p>
+    </header>
+
+    <main class="content-wrapper">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>বিভাগ / শিরোনাম</th>
+            <th>বিস্তারিত বিবরণ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="section-col">
+              <h2><strong>১. আপনার Professional Title</strong></h2>
+            </td>
+            <td class="detail-col">
+              <p>Recommended Professional Title</p>
+              <h1><strong>Online Product Marketing Expert &amp; Consultant</strong></h1>
+              <p>Specialising in B2C Physical Products</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-col">
+              <h2><strong>২. আপনার Positioning Statement</strong></h2>
+            </td>
+            <td class="detail-col">
+              <p>আপনার পরিচয় ও কাজের উদ্দেশ্য একসঙ্গে প্রকাশ করার জন্য:</p>
+              <div class="statement-box">
+                <p>I help small and medium-sized B2C physical product sellers, including home-based entrepreneurs and individual business owners, learn how to market and promote their products online, generate targeted traffic, and drive sales.</p>
+                <p>My goal is to equip them with the knowledge, practical skills and resources they need to independently understand, implement and manage the complete online marketing and sales generation process for their own products.</p>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-col">
+              <h2><strong>৩. সংক্ষিপ্ত Introduction</strong></h2>
+            </td>
+            <td class="detail-col">
+              <p>কেউ যদি জিজ্ঞাসা করেন, "What do you do?", তাহলে বলতে পারেন:</p>
+              <div class="statement-box">
+                <p>I am an Online Product Marketing Expert &amp; Consultant. I help small business owners and independent product sellers learn how to market their physical products online, generate traffic and drive sales independently.</p>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-col">
+              <h2><strong>৪. আপনার কাজের মূল দর্শন</strong></h2>
+            </td>
+            <td class="detail-col">
+              <p>আমি আপনার পুরো কাজটিকে এই একটি বাক্যে সংক্ষেপ করব:</p>
+              <div class="philosophy-quote">
+                <strong>Teach them to do it themselves, not depend on someone else to do it for them.</strong>
+              </div>
+              <p>এটি গুরুত্বপূর্ণ, কারণ আপনার Professional Positioning-এ আপনি Done-for-You Marketing Agency বা Outsourced Marketing Service Provider নন। আপনি মূলত একজন Educator, Expert ও Consultant, যিনি Client-কে নিজের ব্যবসার Marketing ও Sales Generation পরিচালনা করার সক্ষমতা তৈরি করে দেন।</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="advice-box">
+        <p><strong>আমার একটি পরামর্শ:</strong> আপাতত এই Professional Title-টি স্থির রাখুন। তবে আপনার সম্পূর্ণ Curriculum, Course Structure, Service Categories বা Digital Product তৈরি করার আগে আপনার Expertise-কে একটি পূর্ণাঙ্গ Skill Development Framework-এ সাজানো উচিত। এতে আপনার Teaching, Consulting এবং Product Development একই কাঠামোর অধীনে থাকবে।</p>
+      </div>
+    </main>
+
+    <footer>
+      &copy; Siva Prasad Mukherjee. All Rights Reserved.
+    </footer>
+  </div>
+</body>
+</html>
